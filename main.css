@@ -44,6 +44,8 @@ body {
     width: 500px;
     
     margin-top: 0;
+    border: 2px solid  rgb(108, 103, 103);
+    border-radius: 40%;
     
 }
 .animated-text {
@@ -70,13 +72,13 @@ body {
 .hero{
     display: flex;
     color: white;
-    margin-left: 40px;
+  
     justify-content: space-around;
-    margin-top: 10%;
+   margin-top: 8%;
    
 }
 .hero .text-content{
-    margin-left: 10%;
+    margin-left: 5%;
 }
 .hero h2{
     margin-top: 50px;
@@ -89,7 +91,7 @@ body {
     
 }
 .text-content {
-    max-width: 50%;
+    max-width: 40%;
     opacity: 0;
     transform: translateX(-50px);
     animation: slideInFromLeft 1s forwards;
@@ -97,10 +99,15 @@ body {
 
 .hero img {
     width: 500px;
-    border-radius: 10px;
+    border-radius: 100%;
+    padding-top: 50px;
+    margin-right: 5%;
+    padding-bottom: 50px;
     opacity: 0;
     transform: translateX(50px);
     animation: slideInFromRight 1s forwards;
+    border: 5px solid rgba(255, 83, 83, 0.5); /* Light border with color matching the glow */
+    box-shadow: 0 0 15px rgba(255, 83, 83, 0.6), 0 0 30px rgba(255, 83, 83, 0.4); /* Glowing effect */
 }
 
 @keyframes slideInFromLeft {
@@ -123,6 +130,63 @@ body {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+.hero .text-content .button-more {
+    
+    margin-top: 8%;
+}
+
+.hero .text-content button {
+    padding: 15px;
+    border-radius: 40px;
+    font-size: medium;
+    color: black;
+    background-color: rgb(255, 83, 83);
+    box-shadow: 0 0 10px rgba(255, 83, 83, 0.6), 0 0 20px rgba(255, 83, 83, 0.4), 0 0 30px rgba(255, 83, 83, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.hero .text-content button:hover {
+    box-shadow: 0 0 20px rgba(255, 83, 83, 0.8), 0 0 40px rgba(255, 83, 83, 0.6), 0 0 60px rgba(255, 83, 83, 0.4);
+}
+.About-me {
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    align-items: center; /* Optional: to center items vertically */
+    margin-top: 8%;
+}
+
+.About-me img {
+    height: 200px;
+    border-radius: 100%;
+    padding-top: 50px;
+    margin-left: 8%;
+    padding-bottom: 50px;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInFromLeft 1s forwards;
+    border: 5px solid rgba(255, 83, 83, 0.5);
+    box-shadow: 0 0 15px rgba(255, 83, 83, 0.6), 0 0 30px rgba(255, 83, 83, 0.4);
+}
+
+.About-me .About-text {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    margin-left: 25%;
+    transform: translateX(50px);
+    animation: slideInFromRight 1s forwards;
+}
+
+.About-me .About-text h2 {
+    color: red;
+}
+
+.About-me .About-text p {
+    width: 80%;
+    line-height: 200%;
 }
 
 
@@ -152,6 +216,7 @@ body {
         opacity: 0.8;
         z-index: 1;
         color: white;
+        font-size: medium;
         position: absolute;
         top: 10%; 
         width: 100%;
@@ -174,15 +239,49 @@ body {
         width: 100%;
         align-items: center;
         margin-right: 20px;
+        justify-content: center;
         
+    }
+    .About-me{
+        flex-direction: column;
+        margin: 0;
+        margin-top: 20%;
+        width: 100%;
+        align-items: center;
+        margin-right: 20px;
+        justify-content: center;
+        
+    }
+    .About-me img{
+        margin: 0;
+    }
+    .About-me .About-text{
+        margin-left: 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero img{
+        margin-right: 0%;
+        border: 0px;
+        box-shadow: none;
     }
     .hero .text-content{
         max-width: fit-content;
         display: flex;
         flex-direction: column;
-        
+        margin-top: 5px;
         align-items: center;
         margin-left: 20px;
+    }
+    .text-content h1{
+        font-size: larger;
+    }
+    .text-content p{
+        font-size: large;
     }
     
 }
