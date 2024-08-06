@@ -517,4 +517,10 @@ h2.titulo{
     .col{
         margin-left: 10px;
     }
+    .container{
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+      
+    }
 }
