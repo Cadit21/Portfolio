@@ -391,7 +391,7 @@ h2.titulo{
 
 /*media queries*/
 @media (max-width: 1200px){
-  h2 {font-size:2.2em;}
+  h2 {font-size:1.8em;}
 }
 @media (max-width: 980px){
   h2 {font-size:1.8em;}
