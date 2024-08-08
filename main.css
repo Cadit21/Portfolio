@@ -88,6 +88,7 @@ body {
     width: 100%;
     margin-top: 50px;
     line-height: 200%;
+    font-size: larger;
     
 }
 .text-content {
@@ -165,6 +166,7 @@ body {
     transition: box-shadow 0.3s ease-in-out;
 }
 
+
 .About-me .About-text .btn:hover {
     box-shadow: 0 0 20px rgba(255, 83, 83, 0.8), 0 0 40px rgba(255, 83, 83, 0.6), 0 0 60px rgba(255, 83, 83, 0.4);
 }
@@ -193,9 +195,10 @@ body {
     color: whitesmoke;
     display: flex;
     flex-direction: column;
-    margin-left: 25%;
+    margin-left: 20%;
     transform: translateX(50px);
     animation: slideInFromRight 1s forwards;
+    font-size: larger;
 }
 
 h2.titulo{
@@ -244,6 +247,10 @@ h2.titulo{
   .container > * {
     position: relative;
     z-index: 2;
+  }
+  .contact{
+    background-color: white;
+    
   }
 
 .container h1{
@@ -414,6 +421,86 @@ h2.titulo{
     width: 80%;
     line-height: 200%;
 }
+.projects h1{
+    text-align: center;
+    color: #c52b2b;
+}
+.contact h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contact .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.icon i{
+    
+    border: 2px black solid;
+    border-radius: 20%;
+    padding: 10px;
+    margin-left: 20px;
+    background-color: white;
+    
+}
+.contact .form-fields{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+.contact .form-fields{
+   
+    width: 40%;
+    height: 400px;
+    background-color: rgb(233, 233, 233);
+}
+.form{
+    display: flex;
+    
+    justify-content: center;
+}
+button{
+    padding: 10px;
+    margin: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #e93f3f;
+    color: black;
+}
+.icon-box{
+    
+        background-color: rgb(31, 29, 29);
+    
+}
+.icon{
+    
+    margin-bottom: 20px;
+   
+}
+.icon-box h1{
+    padding: 30px;
+    color: red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 0 0 10px rgba(255, 83, 83, 0.6), 0 0 20px rgba(255, 83, 83, 0.4), 0 0 30px rgba(255, 83, 83, 0.2);
+}
+
+
+input{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 60%;
+    padding: 20px;
+}
+
+ .Message{
+    height: 200px ;
+    width: 65%;
+    margin-top: 10px;
+}
+
+
 
 
 /* Responsive styling */
@@ -482,6 +569,7 @@ h2.titulo{
         justify-content: center;
         
     }
+    
     .About-me img{
         margin: 0;
     }
@@ -522,5 +610,13 @@ h2.titulo{
         display: flex;
         flex-direction: column;
       
+    }
+    .Message{
+        height: 100px;
+        width: 73%;
+    }
+    .contact .form-fields{
+        height: 300px;
+        width: 80%;
     }
 }
