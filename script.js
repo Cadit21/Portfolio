@@ -1,5 +1,7 @@
 let ele = document.getElementsByClassName('menu-content')[0];
 
+let moon= document.querySelector('.header i');
+
 function toggleMenu() {
     if (ele.style.display === 'block') {
         ele.style.display = 'none';
@@ -33,4 +35,39 @@ function startTypingAnimation() {
 
 document.addEventListener('DOMContentLoaded', () => {
     startTypingAnimation();
+});
+
+moon.addEventListener('click', () => {
+    if (moon.classList.contains('fa-moon')) {
+        moon.classList.remove('fa-moon');
+        moon.classList.add('fa-sun');
+        moon.style.color = 'orange';
+    } else {
+        moon.classList.remove('fa-sun');
+        moon.classList.add('fa-moon');
+        moon.style.color = 'white';
+    }
+
+    // Optional: You can also change the theme or other elements when toggling the icon
+    let element = document.querySelector('body');
+    let eles = document.querySelectorAll('p');
+    let links = document.querySelectorAll('.links a');
+
+    if (moon.classList.contains('fa-sun')) {
+        element.style.background = 'white';
+        for (let p of eles) {
+            p.style.color = 'black';
+        }
+        for (let a of links) {
+            a.style.color = 'black';
+        }
+    } else {
+        element.style.background = 'black';
+        for (let p of eles) {
+            p.style.color = 'white';
+        }
+        for (let a of links) {
+            a.style.color = 'white';
+        }
+    }
 });
