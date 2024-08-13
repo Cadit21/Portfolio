@@ -428,6 +428,7 @@ h2.titulo{
 }
 .About-me .About-text h2 {
     color: #008080;
+
 }
 
 .About-me .About-text p {
@@ -580,6 +581,7 @@ input{
         align-items: center;
         margin-right: 20px;
         justify-content: center;
+       
         
     }
     
@@ -594,6 +596,10 @@ input{
         justify-content: center;
         align-items: center;
     }
+    .About-me .About-text h2 {
+         font-size: xx-large;
+    }
+        
     
     .hero img{
         margin-right: 0%;
@@ -619,7 +625,7 @@ input{
         margin-left: 10px;
     }
     .container{
-        margin-top: 10%;
+        margin-top: 18%;
         display: flex;
         flex-direction: column;
       
