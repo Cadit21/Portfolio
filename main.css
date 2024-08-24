@@ -1,6 +1,11 @@
 /* Base styling */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: rgb(34, 33, 33);
+    background-color: rgb(17 22 64);;
     margin: 0;
     padding: 0;
 }
@@ -25,6 +30,10 @@ body {
 .header .links {
     margin-right: 30px;
     margin-top: 30px;
+    
+}
+.links a{
+    padding-right: 10%;
 }
 
 .menu {
@@ -37,36 +46,34 @@ body {
     font-size: xx-large;
     margin-top: 20px;
     margin-left: 50px;
+    border: 2px rgb(100, 255, 218) solid;
+    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 50px;
     
 }
 
 .header a {
-    color: #008080; /* Ensure links are white */
+    color: rgb(100, 255, 218);
     font-weight: 600;
     text-decoration: none; /* Remove underline */
-    padding-right: 30px;
+    padding-right: 60px;
     margin-top: 0;
     font-size: larger;
 }
 
 .text {
-    color: #008080;
+    color:rgb(100, 255, 218)  ;
     text-shadow: 0 0 10px rgba(83, 138, 170, 0.6), 0 0 20px rgba(83, 138, 170, 0.4), 0 0 30px rgba(83, 138, 170, 0.2);
 }
-.hero img{
-    width: 500px;
-    
-    margin-top: 0;
-    border: 2px solid  rgb(108, 103, 103);
-    border-radius: 40%;
-    
-}
+
 .animated-text {
     display: inline-block;
     font-family: monospace;
     border-right: 2px solid #333;
     white-space: nowrap;
-    color: #008080;
+    color: rgb(100, 255, 218);
     font-weight: 700;
     overflow: hidden;
     font-size: x-large;
@@ -111,18 +118,39 @@ body {
     animation: slideInFromLeft 1s forwards;
 }
 
+
+
 .hero img {
-    width: 500px;
-    border-radius: 100%;
-    padding-top: 50px;
+   
+    height: 400px;
+    width: 400px;
     margin-right: 5%;
-    padding-bottom: 50px;
-    opacity: 0;
-    transform: translateX(50px);
-    animation: slideInFromRight 1s forwards;
-    border: 5px solid teal ;/* Light border with color matching the glow */
-    box-shadow: 0 0 10px  rgba(83, 138, 170, 0.6), 0 0 20px rgba(83, 138, 170, 0.4), 0 0 30px rgba(83, 138, 170, 0.2) /* Glowing effect */
+    border: 2px solid rgba(83, 138, 170, 0.6); /* Border color set to purple */
+    border-radius: 50%;
+     /* Purple glow effect */
+    position: relative;
+    z-index: 1;
+    animation: shine 2s infinite 2s; /* Apply the shine animation */
 }
+
+@keyframes shine {
+    0% {
+        box-shadow: none; /* Start with a small, centered shadow */
+        
+    }
+
+   
+    100%{
+       box-shadow:  0 0 20px rgba(83, 138, 170, 0.8),  /* Increase blur to 20px */
+         0 0 60px rgba(83, 138, 170, 0.6),  /* Increase blur to 60px */
+    0 0 120px rgba(83, 138, 170, 0.4); /* Increase blur to 120px */ /* Center the shadow again with a larger spread */
+    }
+   
+}
+
+
+
+
 
 @keyframes slideInFromLeft {
     from {
@@ -146,41 +174,48 @@ body {
     }
 }
 
-.hero .text-content .button-more {
-    
-    margin-top: 8%;
-}
+
 
 .hero .text-content button {
     padding: 15px;
     border-radius: 40px;
     font-size: medium;
     color: black;
-    background-color: teal;
-    box-shadow: 0 0 10px  rgba(83, 138, 170, 0.6), 0 0 20px rgba(83, 138, 170, 0.4), 0 0 30px rgba(83, 138, 170, 0.2);
+    background-color:  rgb(100, 255, 218);
+    
     transition: box-shadow 0.3s ease-in-out;
 }
 
 .hero .text-content button:hover {
     box-shadow: 0 0 10px  rgba(83, 138, 170, 0.6), 0 0 20px rgba(83, 138, 170, 0.4), 0 0 30px rgba(83, 138, 170, 0.2)
 }
-.About-me .button{
-    margin-top: 5%;
+
+.btns{
+    display: flex;
+   
+    
 }
-.About-me .About-text .btn {
+
+ .btn {
+    
     padding: 15px;
     border-radius: 40px;
+    margin-top: 8%;
     font-size: medium;
     text-decoration: none;
-    border: 1px black solid;
-    color: black;
-    background-color: teal;
-    box-shadow: 0 0 10px  rgba(83, 138, 170, 0.6), 0 0 20px rgba(83, 138, 170, 0.4), 0 0 30px rgba(83, 138, 170, 0.2);
+    border: 2px black solid;
+    color: white;
+    
+    
     transition: box-shadow 0.3s ease-in-out;
+}
+.button{
+    margin-top: 18px;
+    margin-left: 5%;
 }
 
 
-.About-me .About-text .btn:hover {
+ .btn:hover {
     box-shadow: 0 0 20px rgba(83, 138, 170, 0.8), 0 0 40px rgba(83, 138, 170, 0.6), 0 0 60px rgba(83, 138, 170, 0.2);
 }
 .About-me {
@@ -261,10 +296,7 @@ h2.titulo{
     position: relative;
     z-index: 2;
   }
-  .contact{
-    background-color: white;
-    
-  }
+ 
 
 .container h1{
     text-align: center;
@@ -416,8 +448,9 @@ h2.titulo{
 @media (max-width: 980px){
   h2 {font-size:1.8em;}
 }
+
 @media (max-width: 767px){
-  h2 {font-size:1.4em;}
+  h2 {font-size:1.8em;}
 }
 @media (max-width: 580px){
   h2 {font-size:1.1em; padding:10px 0;}
@@ -439,8 +472,10 @@ h2.titulo{
     text-align: center;
     color: teal;
 }
+
 .contact h1{
     text-align: center;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 .contact .icon{
@@ -455,37 +490,43 @@ h2.titulo{
     border-radius: 20%;
     padding: 10px;
     margin-left: 20px;
-    background-color: white;
+    background-color: white
     
 }
-.contact .form-fields{
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center;
-}
+
 .contact .form-fields{
    
-    width: 40%;
-    height: 400px;
-    background-color: rgb(233, 233, 233);
-}
-.form{
-    display: flex;
+    width: 100%;
     
-    justify-content: center;
+
+   
 }
-button{
+.form {
+    border: 2px solid rgb(100, 255, 218);
+    border-radius: 20px;
+    width: 50%;
+    margin: 0 auto;
+    display: block; /* corrected 'display' property */
+    margin-bottom: 5%;
+    padding: 20px;
+}
+
+.form button{
     padding: 10px;
-    margin: 10px;
+    margin-top: 5%;
+    width: 100%;
     padding-left: 30px;
     padding-right: 30px;
-    background-color: teal;
+    background-color: rgb(100, 255, 218);
+    border-radius: 20px;
     color: black;
+}
+.form button:hover{
+    cursor: pointer;
 }
 .icon-box{
     
-        background-color: rgb(31, 29, 29);
+        background-color: black
     
 }
 .icon{
@@ -495,7 +536,7 @@ button{
 }
 .icon-box h1{
     padding: 30px;
-    color: #008080;
+    color: rgb(100, 255, 218);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-shadow: 0 0 8px rgba(76, 204, 230, 0.6), 0 0 18px rgba(76, 204, 230, 0.4), 0 0 28px rgba(76, 204, 230, 0.2);
 }
@@ -504,14 +545,25 @@ button{
 input{
     margin-top: 10px;
     margin-bottom: 5px;
-    width: 60%;
+    width: 100%;
     padding: 20px;
+    background: none;
+    border: 2px solid rgb(100, 255, 218);
+    border-radius: 20px;
+    box-sizing: border-box;
+    color: white;
 }
 
  .Message{
     height: 200px ;
-    width: 65%;
+    width: 100%;
     margin-top: 10px;
+    background: none;
+    border: 2px solid rgb(100, 255, 218);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    color: white;
 }
 
 
@@ -569,10 +621,15 @@ input{
         justify-content: center;
         
     }
+    .hero img{
+        width: 200px;
+        height: 200px;
+    }
     .header p{
        
         margin-left: 20px;
     }
+    
     .About-me{
         flex-direction: column;
         margin: 0;
@@ -585,12 +642,10 @@ input{
         
     }
     
-    .About-me img{
-        margin: 0;
-    }
+    
     .About-me .About-text{
         margin-left: 20px;
-
+        margin-right: 2%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -599,10 +654,17 @@ input{
     .About-me .About-text h2 {
          font-size: xx-large;
     }
+    .btns{
+        margin-right: 4%;
+    }
+    .button{
+        margin-left: 0;
+        margin-top: 5%;
+    }
         
     
     .hero img{
-        margin-right: 0%;
+       
         border: 0px;
         margin-left: 10%;
         box-shadow: none;
@@ -618,11 +680,10 @@ input{
     .text-content h1{
         font-size: larger;
     }
-    .text-content p{
-        font-size: large;
-    }
+    
     .col{
         margin-left: 10px;
+        width: 90%;
     }
     .container{
         margin-top: 18%;
@@ -632,14 +693,22 @@ input{
     }
     .Message{
         height: 100px;
-        width: 73%;
+       
     }
     .contact .form-fields{
         height: 300px;
-        width: 80%;
+       
     }
 
     .header i{
         left:0
     }
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+
+    .container {
+        margin-top: 0;
+    }
+    
 }
