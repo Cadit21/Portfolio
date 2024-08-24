@@ -38,4 +38,45 @@ function startTypingAnimation() {
 document.addEventListener('DOMContentLoaded', () => {
     startTypingAnimation();
 });
+let form = document.querySelector('form');
+
+function sendEmail() {
+    // Get values from the form inputs
+    let name = document.querySelector('input[placeholder="Enter Your Name"]').value;
+    let email = document.querySelector('input[placeholder="Enter Your Email"]').value;
+    let messageContent = document.querySelector('textarea[placeholder="Type Your Message Here"]').value;
+
+    // Construct the email subject and body
+    let subject = `Message from ${name} (${email})`;
+    let body = `You have received a new message from ${name} (${email}):\n\n${messageContent}`;
+
+    // Send the email
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "aditic041@gmail.com",
+        Password: "F5677AA773EBE914B596CB6B2F3FC4C33D93",
+        To: 'aditic041@gmail.com',
+        From: "aditic041@gmail.com",
+        Subject: subject,
+        Body: body
+    }).then(
+        message => {
+            if(message=='OK'){
+                Swal.fire({
+                    title: "!Success",
+                    text: "Message Sent Successfully",
+                    icon: "success"
+                  });
+            }
+        }
+    ).catch(error => {
+        console.error("Error sending email:", error);
+    });
+}
+form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    sendEmail();
+})
+
+
 
