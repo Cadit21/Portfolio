@@ -356,6 +356,47 @@ h2.titulo{
   border-right:1px solid #333; 
   border-bottom:1px solid #333;  
 }
+.proj{
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    justify-content: space-between;
+}
+.proj-cont{
+   
+    border: 2px solid rgb(100, 255, 218);
+    border-radius: 20px;
+    padding: 10px;
+    
+}
+
+.proj-cont h2{
+    color: rgb(100, 255, 218);
+}
+.proj-cont .tech{
+    padding-right: 5px;
+}
+.proj-cont .tech span{
+
+    border: 2px solid rgb(17 22 64);
+    background-color: rgb(26, 112, 112);
+    border-radius: 6px;
+    font-weight: bolder;
+    padding: 2px;
+
+}
+.proj-cont p{
+    color: rgb(161, 156, 156);
+    width: 400px;
+    
+}
+.proj-cont img{
+
+    width: 400px;
+    height: 200px;
+    border-radius: 20px ;
+
+}
 .skill .c{
     height: 60px;
     width: 50px;
@@ -471,6 +512,9 @@ h2.titulo{
 .projects h1{
     text-align: center;
     color: teal;
+}
+.contact{
+    margin-top: 10%;
 }
 
 .contact h1{
@@ -705,6 +749,27 @@ input{
     .header i{
         left:0
     }
+
+    .proj{
+        flex-direction: column;
+        padding-top: 5%;
+    }
+    .proj-cont{
+        margin-top: 20px;
+    }
+    .proj-cont img{
+        width: 100%;
+     height: auto; /* Maintains the aspect ratio */
+    }
+    .proj-cont p{
+        width: 100%;
+    }
+    .proj{
+        padding-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
 }
 
 @media screen and (min-width: 700px) and (max-width: 900px) {

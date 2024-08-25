@@ -78,5 +78,31 @@ form.addEventListener('submit',(e)=>{
     sendEmail();
 })
 
+let btn = document.querySelector(".button-more button");
+console.log(btn);
+
+
+
+btn.addEventListener('click',()=>{
+    Swal.fire({
+        title:"<strong>About Me</strong>",
+        text: "I'm a frontend developer with strong problem-solving skills and a solid understanding of data structures and algorithms. I'm passionate about new technologies and have a strong interest in AI/ML. I'm currently in the 4th year of my B.Tech at G.B. Pant DSEU Okhla - I Campus, majoring in Electronics & Communication. Throughout college, I've participated in various technical events, including Aerothon 2024 conducted by SAE and IKR 2023, and I've also been actively involved in hackathons.",
+        showClass: {
+          popup: `
+            animate__animated
+            animate__fadeInUp
+            animate__faster
+          `
+        },
+        hideClass: {
+          popup: `
+            animate__animated
+            animate__fadeOutDown
+            animate__faster
+          `
+        }
+      });
+
+});
 
 
