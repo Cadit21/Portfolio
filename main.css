@@ -516,10 +516,10 @@ h2.titulo{
   h2 {font-size:1.8em;}
 }
 @media (max-width: 580px){
-  h2 {font-size:1.1em; padding:10px 0;}
+  h2 {font-size:1.1em; }
 }
 @media (max-width: 480px){ 
-  h2 {font-size:2.2em; padding: 10px 0 15px 0;}
+  h2 {font-size:2.2em;}
   .col {width: 90%;}
 }
 .About-me .About-text h2 {
@@ -692,6 +692,14 @@ input{
         justify-content: center;
         
     }
+    .Aero{
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .proj-cont span{
+       
+    }
     .hero img{
         width: 200px;
         height: 200px;
@@ -790,6 +798,9 @@ input{
         padding-top: 20px;
         margin-left: 10px;
         margin-right: 10px;
+    }
+    .proj-cont span{
+        margin-top: 2px;
     }
 
     
