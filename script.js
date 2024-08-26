@@ -105,4 +105,41 @@ btn.addEventListener('click',()=>{
 
 });
 
+let wb= document.querySelector('.wa');
+
+function popinfo() {
+    Swal.fire({
+        title: "Weather App",
+        text: "The Weather App is a sleek and user-friendly application designed to provide you with accurate and up-to-date weather conditions for any city of your choice. Simply type the name of the city, and the app instantly delivers a detailed 4-day weather forecast. Get the latest weather conditions, including temperature, humidity, wind speed, and atmospheric pressure. The app is designed for ease of use, with a simple input field for entering the city name and clear, concise weather reports.",
+        imageUrl: "project1.png",
+        width: "50rem",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6", // Confirm button color
+        cancelButtonColor: "#f39c12", // Cancel button color
+        confirmButtonText: "View Live App",
+        cancelButtonText: "View Code",
+        showCloseButton: true, // Adds the cross icon at the top right
+        customClass: {
+            confirmButton: 'custom-button',
+            cancelButton: 'custom-button',
+        },
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Redirect to the live app link
+            window.location.href = "https://cadit21.github.io/Weather-App/"; // Replace with your live app URL
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Redirect to the code repository link
+            window.location.href = "https://github.com/Cadit21/Weather-App"; // Replace with your GitHub or code repository URL
+        }
+    });
+}
+
+
+
+
+
+wb.addEventListener('click',popinfo);
+
+
+
 
