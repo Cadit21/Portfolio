@@ -140,6 +140,123 @@ function popinfo() {
 
 wb.addEventListener('click',popinfo);
 
+function popinfo2() {
+    Swal.fire({
+        title: "TODO-APP",
+        text: "The Todo app is a task management tool designed to help users stay organized and on top of their to-do lists. With Toto, users can effortlessly create tasks, update details as needed, and delete tasks that are no longer relevant. The app also allows users to mark tasks as complete, giving them a clear view of their progress. The intuitive interface ensures that managing tasks is a seamless experience, making Toto an essential tool for anyone looking to enhance their productivity.",
+        imageUrl: "todo.png",
+        width: "50rem",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6", // Confirm button color
+        cancelButtonColor: "#f39c12", // Cancel button color
+        confirmButtonText: "View Live App",
+        cancelButtonText: "View Code",
+        showCloseButton: true, // Adds the cross icon at the top right
+        customClass: {
+            confirmButton: 'custom-button',
+            cancelButton: 'custom-button',
+        },
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Redirect to the live app link
+            window.location.href = "https://todo-f3sn.vercel.app/"; // Replace with your live app URL
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Redirect to the code repository link
+            window.location.href = "https://github.com/Cadit21/Todo"; // Replace with your GitHub or code repository URL
+        }
+    });
+}
+
+let bt= document.querySelector('.tob');
+
+bt.addEventListener('click',popinfo2);
+
+function popinfo3() {
+    Swal.fire({
+        title: "MUSIC APP",
+        text: "The music app you're developing allows users to fully control their listening experience. With features to play songs, pause them, forward to the next track, and easily switch between tracks, this app provides a seamless and enjoyable music experience. The intuitive design ensures that users can effortlessly manage their music, making it perfect for any music lover.",
+        imageUrl: "music.png",
+        width: "50rem",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6", // Confirm button color
+        cancelButtonColor: "#f39c12", // Cancel button color
+        confirmButtonText: "View Live App",
+        cancelButtonText: "View Code",
+        showCloseButton: true, // Adds the cross icon at the top right
+        customClass: {
+            confirmButton: 'custom-button',
+            cancelButton: 'custom-button',
+        },
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Redirect to the live app link
+            window.location.href = "https://cadit21.github.io/Weather-App/"; // Replace with your live app URL
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Redirect to the code repository link
+            window.location.href = "https://github.com/Cadit21/Music-App"; // Replace with your GitHub or code repository URL
+        }
+    });
+}
+let button= document.querySelector('.mus');
+button.addEventListener('click',popinfo3);
+
+function popinfo4() {
+    Swal.fire({
+        title: "Aerothon 2024",
+        text: "Participated in Aerothon 2024 with a team of 10. In Phase 1, we successfully submitted and presented the design report of an autonomous drone capable of operations such as hotspot identification, target detection, and payload delivery. This phase was conducted in Bangalore in June 2024, and we successfully cleared it.",
+        imageUrl: "aerot.png",
+        width: "50rem",
+        showCancelButton: true,
+       // Confirm button color
+        cancelButtonColor: "#f39c12", // Cancel button color
+       
+        cancelButtonText: "View Report",
+        showCloseButton: true, // Adds the cross icon at the top right
+        customClass: {
+            confirmButton: 'custom-button',
+            cancelButton: 'custom-button',
+        },
+    }).then((result) => {
+        
+         if (result.dismiss === Swal.DismissReason.cancel) {
+            // Redirect to the code repository link
+            window.location.href = "https://drive.google.com/file/d/1RQjXLUsZU9PgMoHpO0tW8Vdi09h3rm3u/view?usp=sharing"; // Replace with your GitHub or code repository URL
+        }
+    });
+}
+
+let abtn= document.querySelector('.aero');
+abtn.addEventListener('click',popinfo4)
+
+function popinfo5() {
+    Swal.fire({
+        title: "    Indian Karting Racing 2023",
+        text: "Participated in the Indian Karting Racing event, where I was involved in the design and manufacturing of a go-kart. Our kart achieved a top speed of 60 km/h, earning us both the People's Choice Award and the Future Talent Award.",
+        imageUrl: "ikr2.png",
+        width: "50rem",
+        showCancelButton: true,
+       // Confirm button color
+        cancelButtonColor: "#f39c12", // Cancel button color
+       
+        cancelButtonText: "Certificate",
+        showCloseButton: true, // Adds the cross icon at the top right
+        customClass: {
+            confirmButton: 'custom-button',
+            cancelButton: 'custom-button',
+        },
+    }).then((result) => {
+        
+         if (result.dismiss === Swal.DismissReason.cancel) {
+            // Redirect to the code repository link
+            window.location.href = "https://drive.google.com/file/d/10UDAvlRSYE2_JGenHjev-uugJpq49jeG/view?usp=sharing"; // Replace with your GitHub or code repository URL
+        }
+    });
+}
+
+let ikrbtn= document.querySelector('.ikr');
+
+ikrbtn.addEventListener('click',popinfo5);
+
 
 
 

@@ -403,6 +403,13 @@ h2.titulo{
     background-color: rgb(100, 255, 218);
     border-radius: 20px;
 }
+
+.proj-cont button:hover{
+
+    cursor: pointer;
+     
+    
+}
 .Aero{
 
     display: flex;
