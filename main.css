@@ -813,10 +813,16 @@ input{
     
 }
 
-@media screen and (min-width: 700px) and (max-width: 900px) {
 
-    .container {
-        margin-top: 0;
+
+@media (min-width: 1000px) and ( max-width: 1500px) {
+
+    .proj-cont{
+        width: 30%;
     }
-    
+
+    .proj-cont p{
+        width: 100%;
+    }
 }
+
