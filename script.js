@@ -190,7 +190,7 @@ function popinfo3() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirect to the live app link
-            window.location.href = "https://cadit21.github.io/Weather-App/"; // Replace with your live app URL
+            window.location.href = "https://cadit21.github.io/Music-App/"; // Replace with your live app URL
         } else if (result.dismiss === Swal.DismissReason.cancel) {
             // Redirect to the code repository link
             window.location.href = "https://github.com/Cadit21/Music-App"; // Replace with your GitHub or code repository URL
